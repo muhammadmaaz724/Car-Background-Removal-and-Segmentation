@@ -1,18 +1,18 @@
-# Car Image Anonymization & Enhancement using YOLOv8 and SAM2
+# Car Image Anonymization & Enhancement using YOLO11 and SAM2
 
-An advanced computer vision pipeline that uses YOLOv8 for object detection and SAM2 for fine-grained segmentation to anonymize car images by blurring number plates, tinting windows, and removing backgrounds.
+An advanced computer vision pipeline that uses YOLO11 for object detection and SAM2 for fine-grained segmentation to anonymize car images by blurring number plates, tinting windows, and removing backgrounds.
 
 ---
 
 ## Project Overview
 
-This project is designed to anonymize car images while preserving essential details. It combines the power of **YOLOv8** for accurate object detection and **Meta’s SAM2** (Segment Anything Model v2) for precise segmentation. By leveraging both models together, the system performs targeted edits like blurring number plates, tinting windows, and replacing or removing backgrounds — all with clean edges and object-level control.
+This project is designed to anonymize car images while preserving essential details. It combines the power of **YOLO11** for accurate object detection and **Meta’s SAM2** (Segment Anything Model v2) for precise segmentation. By leveraging both models together, the system performs targeted edits like blurring number plates, tinting windows, and replacing or removing backgrounds — all with clean edges and object-level control.
 
 ---
 
 ## Key Features
 
-- **Dual-Model Pipeline:** Combines YOLOv8 (detection) and SAM2 (segmentation) for highly accurate and controlled image editing.
+- **Dual-Model Pipeline:** Combines YOLO11 (detection) and SAM2 (segmentation) for highly accurate and controlled image editing.
 - **Anonymization Tasks:**
   - Blur car number plates
   - Tint windows for privacy
@@ -27,7 +27,7 @@ This project is designed to anonymize car images while preserving essential deta
 
 ### Model Design and Training
 
-- **YOLOv8:**
+- **YOLO11:**
   - Used for object detection.
   - Trained on a custom-annotated dataset.
   - Detects relevant objects like car plates, windows, and cars themselves.
@@ -43,7 +43,7 @@ This project is designed to anonymize car images while preserving essential deta
 
 ### Processing Pipeline
 
-1. **Detection:** YOLOv8 detects objects in the input image.
+1. **Detection:** YOLO11 detects objects in the input image.
 2. **Segmentation:** Detected bounding boxes are sent to SAM2 to get precise masks.
 3. **Anonymization:**
    - **Number plates** are blurred.
